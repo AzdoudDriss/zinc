@@ -1,0 +1,8 @@
+# Ce fichier est priotaire a l'index 
+# On active la réécriture du serveur Apache
+
+RewriteEngine on 
+
+    # Si la racine du dossier "zinc" est charge par un client 
+    # redirigeons le automatiquement vers le dossier "public"
+    RewriteRule ^(.*)$ public/index.php
