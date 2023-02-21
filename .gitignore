@@ -1,0 +1,2 @@
+# pour qu'il ignore le dossier vendor (c'est comme les nodes module)
+/vendor/
