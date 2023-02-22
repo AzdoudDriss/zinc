@@ -1,0 +1,18 @@
+# Ce fichier est priotaire a l'index 
+# On active la réécriture du serveur Apache
+RewriteEngine on 
+
+    # Définition du dossier de l'index comme dossier racine 
+    # lorsqu'on tente d'acceder a l'application via un navigateur
+    DirectoryIndex index.php
+
+# Defintion de la base
+    RewriteBase / 
+
+# Si la requete se trouvent dans la barre d'url n'est ni un fichier ni un dossier 
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Chargeons l'index.php puis arrêtons l'execution du script
+  RewriteRule ^(.*)$ index.php [L]
+
